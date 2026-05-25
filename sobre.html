@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonic Section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+       
+        .container {
+            background-color: #000c8f; 
+            width: 100%;
+            max-width: 1000px;
+            padding: 40px;
+            border-radius: 8px; 
+            color: #ffffff;
+            position: relative;
+        }
+
+        .nav-home {
+            text-transform: uppercase;
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .text-section {
+            flex: 1;
+        }
+
+        .text-section h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 4px solid #ffffff;
+            display: inline-block;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+        }
+
+        .text-section p {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .image-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .image-wrapper {
+            position: relative;
+            background-color: #000000;
+            border-radius: 25px; 
+            padding-top: 15px; 
+            padding-left: 20px; 
+        }
+
+        .image-wrapper img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 25px; 
+            position: relative;
+            bottom: 15px; 
+            right: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .text-section p {
+                text-align: center;
+            }
+
+            .image-wrapper {
+                padding: 0;
+                background-color: transparent;
+            }
+
+            .image-wrapper img {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="nav-home">Home</div>
+
+        <div class="content">
+            
+            <div class="text-section">
+                <h1>Sonic</h1>
+                <p>
+                    Sonic the Hedgehog, criado pela SEGA em 1991, é um ouriço azul superveloz nascido na South Island (Ilha do Sul). Sua missão principal é deter o vilão Dr. Ivo "Eggman" Robotnik, que rapta animais para transformá-los em robôs e busca as sete Esmeraldas do Caos para dominar o mundo. Sonic utiliza sua velocidade, o Spin Attack (ataque giratório) e transforma-se em Super Sonic para proteger seu lar e amigos.
+                </p>
+            </div>
+
+            <div class="image-section">
+                <div class="image-wrapper">
+                    <img src="https://www.cnet.com/a/img/resize/5d54370d8031b27c0f6d5efb12ca0f5cae8c18a8/hub/2022/06/20/4e0ad717-36ff-4f9b-ab19-047ef405b41f/fvua84gwaaaq15r.jpg?auto=webp&fit=crop&height=675&width=1200" alt="Sonic the Hedgehog">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
