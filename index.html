@@ -1,152 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sonic - Home</title>
+    <title>Ben 10 Alien Force</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
             font-family: Arial, sans-serif;
         }
 
-        body {
-            background-color: #050569;
-            color: white;
-            min-height: 100vh;
+        .background {
+            width: 100vw;
+            height: 100vh;
             display: flex;
             flex-direction: column;
+            background: linear-gradient(to bottom, #072d1f 50%, #00ff55 50%);
+            position: relative;
         }
 
-        
-        header {
-            width: 100%;
-            padding: 20px 40px;
+        nav {
+            padding: 15px 20px;
+            z-index: 10;
+        }
+
+        .menu-links {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            gap: 15px;
         }
 
-        .nav-links a {
-            color: white;
-            text-decoration: underline;
+        .menu-links a {
+            color: #ffffff;
+            background-color: #000000;
+            padding: 5px 10px;
+            text-decoration: none;
             font-weight: bold;
-            font-size: 1.2rem;
-            margin-right: 20px;
-            text-transform: uppercase;
+            font-size: 14px;
+            border: 2px solid #ffffff;
+            letter-spacing: 1px;
+            transition: 0.3s;
         }
 
-        .login-link {
-            color: white;
-            text-decoration: underline;
-            font-weight: bold;
-            font-size: 1.2rem;
-            text-transform: uppercase;
+        .menu-links a:hover {
+            background-color: #ffffff;
+            color: #000000;
         }
 
-      
-        .main-title {
-            text-align: center;
-            font-size: 3rem;
-            text-transform: uppercase;
-            text-decoration: underline;
-            letter-spacing: 2px;
-            margin-bottom: 25px;
-        }
-
-     
-        .banner-container {
-            width: 100%;
-            border-top: 4px solid black;
-            border-bottom: 4px solid black;
-            overflow: hidden;
-            display: flex;
-        }
-
-        .banner-img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            object-position: center 20%;
-        }
-
-     
-        .gallery-container {
+        .content-center {
             flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 30px;
-            padding: 40px 20px;
-            flex-wrap: wrap; 
+            position: relative;
+            padding: 20px;
         }
 
-        .card-border {
-            background-color: black;
-            padding: 10px;
-            border-radius: 12px;
+        .logo-container {
+            max-width: 500px; /* Tamanho ajustado para dar destaque à imagem */
             width: 100%;
-            max-width: 300px;
-            aspect-ratio: 16 / 9; 
-            display: flex;
-        }
-
-        .card-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 6px;
-        }
-
-        
-        footer {
-            background-color: #6a6a9b; 
-            color: white;
             text-align: center;
-            padding: 10px 20px;
-            font-weight: bold;
-            font-size: 1rem;
+            z-index: 5;
+        }
+
+        .logo-container img {
             width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">Sobre</a>
+    <div class="background">
+        <nav>
+            <div class="menu-links">
+                <a href="#">HOME</a>
+                <a href="#">SOBRE</a>
+            </div>
+        </nav>
+
+        <div class="content-center">
+            <!-- A imagem foi inserida e centralizada aqui -->
+            <div class="logo-container">
+                <img src="https://en.wikipedia.org/wiki/Ben_10:_Alien_Force" alt="Ben 10 Alien Force">
+            </div>
         </div>
-        <a href="#" class="login-link">Login</a>
-    </header>
-
-    <h1 class="main-title">Sonic</h1>
-
-    <div class="banner-container">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj_hCjM5IGDuKAbbasyGL1_1oFSPTWzgzwFA&s"   class="banner-img">
     </div>
-
-    <main class="gallery-container">
-        
-        <div class="card-border">
-            <img src="https://i0.wp.com/cinegrandiose.com/wp-content/uploads/Sonic-1.png?fit=960%2C540&ssl=1" class="card-img">
-        </div>
-
-        <div class="card-border">
-            <img src="https://i.redd.it/5t0l19bs31lf1.jpeg" class="card-img">
-        </div>
-
-        <div class="card-border">
-            <img src="https://sm.ign.com/ign_br/news/t/the-game-a/the-game-awards-players-voice-award-nominees-revealed-the-30_eh2q.jpg" alt="Shadow" class="card-img">
-        </div>
-
-    </main>
-
-    <footer>
-        copyright gabriel souza - Etec MCM - IWI - Prof. Bruno
-    </footer>
 
 </body>
 </html>
