@@ -1,106 +1,158 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ben 10 Alien Force</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
-
-        body {
-            background-color: #0c392c;
-            color: white;
-            font-family: 'Roboto Condensed', sans-serif;
-            margin: 0;
-            padding: 30px;
-            height: 100vh;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .header {
-            font-size: 28px;
-            margin-bottom: 20px;
-            border-bottom: 3px solid white;
-            display: inline-block;
-            padding-bottom: 5px;
-        }
-
-        .main-content {
-            display: flex;
-            gap: 40px;
-            align-items: flex-start;
-            flex-grow: 1;
-        }
-
-        .text-section {
-            flex: 1;
-        }
-
-        h1 {
-            font-size: 55px;
-            margin: 0 0 20px 0;
-            text-transform: uppercase;
-            border-bottom: 5px solid white;
-            display: inline-block;
-            padding-bottom: 5px;
-        }
-
-        p {
-            font-size: 20px;
-            line-height: 1.4;
-            max-width: 600px;
-        }
-
-        .image-container {
-            width: 400px;
-            height: 550px;
-            background-color: #00ff00; 
-            border-radius: 20px;
-            padding: 5px;
-            position: relative;
-        }
-
-        .image-placeholder {
-            width: 100%;
-            height: 100%;
-            background-color: #000;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .bottom-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 60px;
-            background-color: #00ff00;
-            border-top: 5px solid black;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre - Ben 10 Alien Force</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --dark-green:#0a3323;
+    --bright-green:#2fe23a;
+    --yellow:#f6d90a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    font-family:'Archivo Black', sans-serif;
+    background:var(--dark-green);
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+  }
+ 
+  nav{
+    padding:16px 20px 4px;
+  }
+  nav a{
+    color:#fff;
+    text-decoration:none;
+    font-family:'Anton', sans-serif;
+    letter-spacing:1px;
+    font-size:15px;
+    padding:2px 4px 6px;
+    border-bottom:3px solid #fff;
+  }
+  nav a:hover{ color:var(--yellow); border-color:var(--yellow); }
+ 
+  header.title-bar{
+    padding:6px 20px 18px;
+    border-bottom:3px solid #000;
+  }
+  header.title-bar h1{
+    font-family:'Anton', sans-serif;
+    font-size:34px;
+    letter-spacing:1px;
+    color:#fff;
+    -webkit-text-stroke:1.5px #000;
+    paint-order:stroke fill;
+  }
+ 
+  main.content{
+    flex:1;
+    display:flex;
+    gap:28px;
+    align-items:flex-start;
+    padding:28px 20px;
+    flex-wrap:wrap;
+  }
+ 
+  .text-box{
+    flex:1 1 380px;
+    background:var(--dark-green);
+    border:3px solid #000;
+    border-radius:6px;
+    padding:22px;
+    color:#fff;
+    font-family:'Anton', sans-serif;
+    font-size:15px;
+    line-height:1.55;
+    letter-spacing:0.3px;
+  }
+ 
+  .art-box{
+    flex:0 0 260px;
+    background:#0d2a1c;
+    border:5px solid #fff;
+    border-radius:8px;
+    box-shadow:0 8px 18px rgba(0,0,0,0.45);
+    overflow:hidden;
+    aspect-ratio:3/4;
+    position:relative;
+  }
+  .art-box svg{ width:100%; height:100%; display:block; }
+  .art-box .caption{
+    position:absolute;
+    bottom:0; left:0; right:0;
+    background:rgba(0,0,0,0.55);
+    color:#cfeccf;
+    font-family:'Archivo Black', sans-serif;
+    font-size:10px;
+    text-align:center;
+    padding:5px 6px;
+  }
+ 
+  footer.green-bar{
+    height:22px;
+    background:var(--bright-green);
+    border-top:2px solid #000;
+  }
+ 
+  @media (max-width:600px){
+    main.content{ flex-direction:column; }
+    .art-box{ flex-basis:auto; width:100%; max-width:320px; }
+  }
+</style>
 </head>
 <body>
-
-    <div class="header">HOME</div>
-
-    <div class="main-content">
-        <div class="text-section">
-            <h1>BEN 10 ALIEN FORCE</h1>
-            <p>Ben 10: Alien Force é uma aclamada série de animação norte-americana criada pelo grupo Man of Action para o Cartoon Network. É a segunda série da franquia Ben 10, atuando como uma sequência direta da série original de 2005. O show adota um tom mais sombrio, maduro e realista em comparação com seu antecessor, acompanhando os personagens principais em uma fase mais adulta.</p>
-        </div>
-        
-        <div class="image-container">
-            <div class="image-placeholder">
-                <span style="color: #00ff00;</span>
-            </div>
-        </div>
+ 
+  <nav>
+    <a href="index.html">HOME</a>
+  </nav>
+ 
+  <header class="title-bar">
+    <h1>BEM10 ALIEN FORCE</h1>
+  </header>
+ 
+  <main class="content">
+    <div class="text-box">
+      Ben 10: Alien Force é uma aclamada série de animação norte-americana criada pelo grupo Man of Action para o Cartoon Network. É a segunda série da franquia Ben 10, atuando como uma sequência direta da série original de 2005. O show adota um tom mais sombrio, maduro e realista em comparação com seu antecessor, acompanhando os personagens principais em uma fase mais adulta.
     </div>
-
-    <div class="bottom-bar"></div>
-
+ 
+    <div class="art-box">
+      <svg viewBox="0 0 260 340" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#123f27"/>
+            <stop offset="100%" stop-color="#061a10"/>
+          </linearGradient>
+        </defs>
+        <rect width="260" height="340" fill="url(#sky)"/>
+        <!-- generic alien-squad silhouettes (placeholder art, not the official artwork) -->
+        <g fill="#1f5c34" opacity="0.9">
+          <circle cx="70" cy="120" r="34"/>
+          <rect x="52" y="150" width="36" height="80" rx="10"/>
+        </g>
+        <g fill="#2fe23a" opacity="0.85">
+          <circle cx="150" cy="90" r="28"/>
+          <rect x="134" y="115" width="32" height="90" rx="10"/>
+        </g>
+        <g fill="#0f3a22" opacity="0.95">
+          <circle cx="130" cy="200" r="46"/>
+          <rect x="102" y="240" width="56" height="90" rx="12"/>
+        </g>
+        <g fill="#f6d90a" opacity="0.9">
+          <circle cx="205" cy="150" r="24"/>
+          <rect x="191" y="172" width="28" height="70" rx="8"/>
+        </g>
+      </svg>
+      <div class="caption"><img src="https://m.media-amazon.com/images/M/MV5BODI5YjEzMTUtMTBlNy00MDUxLTkxNzEtODZiNGIyMjg3Yjc3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Arte ilustrativa"></div>
+    </div>
+  </main>
+ 
+  <footer class="green-bar"></footer>
+ 
 </body>
 </html>
+ 

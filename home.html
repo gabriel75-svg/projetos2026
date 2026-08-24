@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ben 10 Alien Force</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --dark-green:#0a3323;
+    --bright-green:#2fe23a;
+    --badge-black:#141414;
+    --badge-gray:#8a8d90;
+    --yellow:#f6d90a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    font-family:'Archivo Black', sans-serif;
+    overflow:hidden;
+    position:relative;
+  }
+  .bg{
+    position:fixed;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+  }
+  .bg .top{
+    flex:1;
+    background:var(--dark-green);
+  }
+  .bg .bottom{
+    flex:1;
+    background:var(--bright-green);
+  }
+ 
+  nav{
+    position:fixed;
+    top:18px;
+    left:18px;
+    z-index:10;
+    display:flex;
+    gap:14px;
+  }
+  nav a{
+    color:#fff;
+    text-decoration:none;
+    font-family:'Anton', sans-serif;
+    letter-spacing:1px;
+    font-size:15px;
+    padding:2px 4px 6px;
+    border-bottom:3px solid #fff;
+  }
+  nav a:hover{ color:var(--yellow); border-color:var(--yellow); }
+ 
+  .badge{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:340px;
+    height:340px;
+    z-index:5;
+  }
+  .badge svg{ width:100%; height:100%; display:block; }
+ 
+  .badge-text{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+  }
+  .ben10-line{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    line-height:0.85;
+  }
+  .ben10-line .ben{
+    font-family:'Anton', sans-serif;
+    font-size:58px;
+    color:var(--yellow);
+    -webkit-text-stroke:3px #000;
+    paint-order:stroke fill;
+    transform:skewX(-4deg);
+  }
+  .ben10-line .one{
+    font-family:'Anton', sans-serif;
+    font-size:58px;
+    color:#fff;
+    -webkit-text-stroke:3px #000;
+    paint-order:stroke fill;
+  }
+  .omnitrix{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    border:3px solid #000;
+    background:
+      radial-gradient(circle at 50% 50%, var(--bright-green) 0 22%, transparent 23%),
+      conic-gradient(#111 0deg 180deg, var(--bright-green) 180deg 360deg);
+    box-shadow: inset 0 0 0 2px #000;
+  }
+  .alienforce-bar{
+    margin-top:8px;
+    background:#111;
+    padding:6px 14px;
+    border-radius:4px;
+    border:2px solid #000;
+  }
+  .alienforce-bar span{
+    font-family:'Anton', sans-serif;
+    font-size:26px;
+    letter-spacing:1px;
+    color:var(--yellow);
+    -webkit-text-stroke:1.5px #000;
+    paint-order:stroke fill;
+  }
+</style>
+</head>
+<body>
+ 
+  <div class="bg">
+    <div class="top"></div>
+    <div class="bottom"></div>
+  </div>
+ 
+  <nav>
+    <a href="index.html" aria-current="page">HOME</a>
+    <a href="sobre.html">SOBRE</a>
+  </nav>
+ 
+  <div class="badge">
+    <svg viewBox="0 0 340 340">
+      <circle cx="170" cy="170" r="158" fill="var(--badge-black)"/>
+      <circle cx="170" cy="170" r="150" fill="none" stroke="#ffffff" stroke-width="34" stroke-dasharray="24 22" stroke-dashoffset="0"/>
+      <circle cx="170" cy="170" r="150" fill="none" stroke="#2fe23a" stroke-width="34" stroke-dasharray="24 22" stroke-dashoffset="23"/>
+      <circle cx="170" cy="170" r="150" fill="none" stroke="#000" stroke-width="6"/>
+      <circle cx="170" cy="170" r="125" fill="none" stroke="var(--badge-gray)" stroke-width="26"/>
+      <circle cx="170" cy="170" r="125" fill="none" stroke="#000" stroke-width="8" stroke-dasharray="4 16"/>
+      <circle cx="170" cy="170" r="96" fill="#111"/>
+      <circle cx="170" cy="170" r="96" fill="none" stroke="#000" stroke-width="4"/>
+    </svg>
+    <div class="badge-text">
+      <div class="ben10-line">
+        <span class="ben">BEN</span>
+        <span class="one">1</span>
+        <div class="omnitrix"></div>
+      </div>
+      <div class="alienforce-bar"><span>ALIEN FORCE</span></div>
+    </div>
+  </div>
+ 
+</body>
+</html>
